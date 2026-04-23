@@ -1,25 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubble Sort Game</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- INTRO SCREEN -->
 <div id="introScreen" class="intro">
   <div class="intro-box">
     <h2>🧠 Learn Bubble Sort</h2>
 
-    <p>
-      Bubble Sort is a simple algorithm.
-      It compares two numbers next to each other.
-    </p>
+    <p>Bubble Sort compares two numbers next to each other.</p>
+    <p>👉 If left is bigger → SWAP</p>
+    <p>👉 If not → KEEP</p>
+    <p>This repeats until sorted.</p>
 
-    <p>
-      👉 If the left number is bigger, we SWAP them  
-      👉 If not, we leave them
-    </p>
-
-    <p>
-      This process repeats until everything is sorted.
-    </p>
-
-    <p class="example">
-      Example: 5, 3 → swap → 3, 5
-    </p>
+    <p class="example">Example: 5, 3 → 3, 5</p>
 
     <button onclick="startGameWithIntro()">Start Game 🚀</button>
   </div>
 </div>
+
+<div class="container">
+  <h1>🔥 Bubble Sort Challenge 🔥</h1>
+  <p class="subtitle">Click YES if left number is bigger than right</p>
+
+  <div class="top-panel">
+    <div class="card">⏱ Time: <span id="timer">0</span>s</div>
+    <div class="card">🏆 Best: <span id="best">0</span>s</div>
+    <div class="card">🎯 Score: <span id="score">0</span></div>
+    <div class="card">❤️ Lives: <span id="lives">3</span></div>
+    <div class="card">📈 Level: <span id="level">1</span></div>
+  </div>
+
+  <div id="bars"></div>
+
+  <button class="start" onclick="startGame()">Restart</button>
+
+  <div>
+    <button class="yes" onclick="checkAnswer(true)">YES</button>
+    <button class="no" onclick="checkAnswer(false)">NO</button>
+  </div>
+
+  <p id="message">Press Start to Play</p>
+</div>
+
+<!-- LINK JAVASCRIPT (VERY IMPORTANT AT BOTTOM) -->
+<script src="script.js"></script>
+
+</body>
+</html>
