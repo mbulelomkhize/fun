@@ -40,7 +40,7 @@ function startGameWithIntro(){
 
 function randomNumbers() {
   numbers = [];
-  let size = 8 + level * 2;
+  let size = 3 + level * 2;
 
   for (let i = 0; i < size; i++) {
     numbers.push(Math.floor(Math.random() * 90) + 10);
