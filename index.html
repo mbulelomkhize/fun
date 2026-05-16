@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 Life Sciences Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-blob-1"></div>
+        <div class="bg-blob-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Life Sciences Visualizer</h1>
+            <p class="subtitle">Grade 12 • Interactive Process Demonstrations</p>
+        </header>
+
+        <!-- Process Selector -->
+        <div class="process-selector">
+            <button class="process-btn active" data-process="photosynthesis">Photosynthesis</button>
+            <button class="process-btn" data-process="respiration">Cellular Respiration</button>
+            <button class="process-btn" data-process="proteinSynthesis">Protein Synthesis</button>
+            <button class="process-btn" data-process="dnaReplication">DNA Replication</button>
+            <button class="process-btn" data-process="digestion">Digestion</button>
+            <button class="process-btn" data-process="circulation">Circulation</button>
+        </div>
+
+        <!-- View Mode Selector -->
+        <div class="view-mode-selector">
+            <button class="mode-btn active" data-mode="interactive">Interactive</button>
+            <button class="mode-btn" data-mode="slideshow">Slideshow</button>
+            <button class="mode-btn" data-mode="animation">Animation</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="process-title" id="processTitle">Photosynthesis</div>
+            <div class="process-description" id="processDescription">Light-dependent & light-independent reactions in chloroplasts</div>
+
+            <!-- Diagram Area -->
+            <div class="diagram-area" id="diagramArea">
+                <div class="diagram-title" id="stepTitle">Light Absorption</div>
+                <div class="diagram-description" id="stepDescription">Chlorophyll in thylakoid membranes absorbs photons</div>
+                <div class="diagram-equation" id="stepEquation">Light energy excites electrons in chlorophyll molecules</div>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span id="stepCounter">Step 1 of 6</span>
+                    <span id="stepPercentage">17%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 17%;"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn btn-prev" id="prevBtn">
+                    <span class="icon">←</span>
+                    <span>Previous</span>
+                </button>
+                <button class="btn btn-play" id="playBtn">
+                    <span class="icon">▶</span>
+                    <span>Play</span>
+                </button>
+                <button class="btn btn-next" id="nextBtn">
+                    <span class="icon">→</span>
+                    <span>Next</span>
+                </button>
+            </div>
+
+            <!-- Reset Button -->
+            <button class="btn btn-reset" id="resetBtn">
+                <span class="icon">↻</span>
+                <span>Reset</span>
+            </button>
+        </div>
+
+        <!-- Step Overview -->
+        <div class="step-overview">
+            <h3>All Steps</h3>
+            <div class="steps-grid" id="stepsGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
