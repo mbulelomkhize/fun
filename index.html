@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 Life Sciences Complete Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-blob-1"></div>
+        <div class="bg-blob-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Life Sciences Visualizer</h1>
+            <p class="subtitle">Grade 12 Paper 2 | Complete Curriculum with Visual Diagrams</p>
+        </header>
+
+        <!-- Process Selector -->
+        <div class="process-selector">
+            <button class="process-btn active" data-process="meiosis">Meiosis</button>
+            <button class="process-btn" data-process="geneticVariation">Genetic Variation</button>
+            <button class="process-btn" data-process="dnaStructure">DNA Structure</button>
+            <button class="process-btn" data-process="proteinSynthesis">Protein Synthesis</button>
+            <button class="process-btn" data-process="genetics">Genetics</button>
+            <button class="process-btn" data-process="sexLinked">Sex-Linked Traits</button>
+            <button class="process-btn" data-process="evolution">Evolution</button>
+            <button class="process-btn" data-process="speciation">Speciation</button>
+            <button class="process-btn" data-process="modernEvolution">Modern Evolution</button>
+            <button class="process-btn" data-process="humanEvolution">Human Evolution</button>
+            <button class="process-btn" data-process="outOfAfrica">Out of Africa</button>
+            <button class="process-btn" data-process="geneticEng">Genetic Engineering</button>
+            <button class="process-btn" data-process="cloning">Cloning & Stem Cells</button>
+        </div>
+
+        <!-- View Mode Selector -->
+        <div class="view-mode-selector">
+            <button class="mode-btn active" data-mode="interactive">Interactive</button>
+            <button class="mode-btn" data-mode="slideshow">Slideshow</button>
+            <button class="mode-btn" data-mode="animation">Animation</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="process-title" id="processTitle">Meiosis & Chromosomes</div>
+            <div class="process-description" id="processDescription">Reduction division producing haploid gametes</div>
+
+            <!-- Diagram Area -->
+            <div class="diagram-area" id="diagramArea">
+                <div class="diagram-title" id="stepTitle">Step Title</div>
+                <div class="diagram-description" id="stepDescription">Description</div>
+                <div class="diagram-equation" id="stepEquation">Detailed diagram with emojis</div>
+                <div class="diagram-details" id="stepDetails">Detailed explanation</div>
+                <div class="diagram-location" id="stepLocation">📍 Location information</div>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span id="stepCounter">Step 1 of 6</span>
+                    <span id="stepPercentage">17%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 17%;"></div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button class="btn btn-prev" id="prevBtn">
+                    <span class="icon">←</span>
+                    <span>Previous</span>
+                </button>
+                <button class="btn btn-play" id="playBtn">
+                    <span class="icon">▶</span>
+                    <span>Play</span>
+                </button>
+                <button class="btn btn-next" id="nextBtn">
+                    <span class="icon">→</span>
+                    <span>Next</span>
+                </button>
+            </div>
+
+            <!-- Reset Button -->
+            <button class="btn btn-reset" id="resetBtn">
+                <span class="icon">↻</span>
+                <span>Reset</span>
+            </button>
+        </div>
+
+        <!-- Step Overview -->
+        <div class="step-overview">
+            <h3>All Steps in This Topic</h3>
+            <div class="steps-grid" id="stepsGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
